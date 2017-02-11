@@ -1,0 +1,43 @@
+{
+  "name": "youemdee",
+  "version": "0.0.0",
+  "description": "Wrap a browserify/browser-pack JavaScript bundle in a Universal Module Definition (UMD) with optional external dependencies, while preserving source maps",
+  "main": "./src/youemdee.js",
+  "bin": {
+    "youemdee": "./bin/youemdee.js"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/CMTegner/youemdee"
+  },
+  "keywords": [
+    "umd",
+    "browserify",
+    "browser-pack",
+    "transform",
+    "sourcemap",
+    "rjs",
+    "requirejs",
+    "amd",
+    "cjs",
+    "commonjs",
+    "global",
+    "window"
+  ],
+  "author": "Christian Tegnér <christian.tegner@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "convert-source-map": "^1.3.0",
+    "minimist": "^1.2.0",
+    "source-map": "^0.5.6",
+    "through2": "^2.0.3"
+  },
+  "devDependencies": {
+    "concat-stream": "^1.6.0",
+    "from2-string": "^1.1.0",
+    "jest": "^18.1.0"
+  }
+}

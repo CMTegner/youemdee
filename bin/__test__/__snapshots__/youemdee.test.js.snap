@@ -1,0 +1,248 @@
+exports[`test Dependency with different local and global name 1`] = `
+"(function (g, factory) {
+    if (typeof exports === \'object\' && typeof module !== \'undefined\') {
+        module.exports = factory(require(\'dep1\'))
+    } else if (typeof define === \'function\' && define.amd) {
+        define([\'dep1\'], factory)
+    } else {
+        g[\'MyModule\'] = factory(g[\'GLOBAL1\'])
+    }
+})(this, function (dep0) {
+  return (function (require) {
+    var define, module, exports // Reset to avoid causing problems for any nested UMDs
+    return ((function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require==\"function\"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error(\"Cannot find module \'\"+o+\"\'\");throw f.code=\"MODULE_NOT_FOUND\",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require==\"function\"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+module.exports = function () {
+  return \'youemdee\';
+};
+
+},{}]},{},[1])
+
+)(1)
+  })(function newRequire (name) {
+    if (name === \'dep1\') return dep0
+    if (typeof require !== \'undefined\') return require(name)
+    var err = new Error(\"Cannot find module \'\" + name + \"\'\")
+    err.code = \'MODULE_NOT_FOUND\'
+    throw err
+  })
+})
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL25vZGVfbW9kdWxlcy9icm93c2VyLXBhY2svX3ByZWx1ZGUuanMiLCIuLi9saWIvQXV0b2NvbXBsZXRlLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7O1lBQUE7QUNBQSxPQUFPLE9BQVAsR0FBaUIsWUFBWTtBQUMzQixTQUFPLFVBQVA7QUFDRCxDQUZEIiwic291cmNlc0NvbnRlbnQiOlsiKGZ1bmN0aW9uIGUodCxuLHIpe2Z1bmN0aW9uIHMobyx1KXtpZighbltvXSl7aWYoIXRbb10pe3ZhciBhPXR5cGVvZiByZXF1aXJlPT1cImZ1bmN0aW9uXCImJnJlcXVpcmU7aWYoIXUmJmEpcmV0dXJuIGEobywhMCk7aWYoaSlyZXR1cm4gaShvLCEwKTt2YXIgZj1uZXcgRXJyb3IoXCJDYW5ub3QgZmluZCBtb2R1bGUgJ1wiK28rXCInXCIpO3Rocm93IGYuY29kZT1cIk1PRFVMRV9OT1RfRk9VTkRcIixmfXZhciBsPW5bb109e2V4cG9ydHM6e319O3Rbb11bMF0uY2FsbChsLmV4cG9ydHMsZnVuY3Rpb24oZSl7dmFyIG49dFtvXVsxXVtlXTtyZXR1cm4gcyhuP246ZSl9LGwsbC5leHBvcnRzLGUsdCxuLHIpfXJldHVybiBuW29dLmV4cG9ydHN9dmFyIGk9dHlwZW9mIHJlcXVpcmU9PVwiZnVuY3Rpb25cIiYmcmVxdWlyZTtmb3IodmFyIG89MDtvPHIubGVuZ3RoO28rKylzKHJbb10pO3JldHVybiBzfSkiLCJtb2R1bGUuZXhwb3J0cyA9IGZ1bmN0aW9uICgpIHtcbiAgcmV0dXJuICd5b3VlbWRlZSdcbn1cbiJdfQ=="
+`;
+
+exports[`test Dependency with different local, global, and amd name 1`] = `
+"(function (g, factory) {
+    if (typeof exports === \'object\' && typeof module !== \'undefined\') {
+        module.exports = factory(require(\'dep1\'))
+    } else if (typeof define === \'function\' && define.amd) {
+        define([\'amd1\'], factory)
+    } else {
+        g[\'MyModule\'] = factory(g[\'GLOBAL1\'])
+    }
+})(this, function (dep0) {
+  return (function (require) {
+    var define, module, exports // Reset to avoid causing problems for any nested UMDs
+    return ((function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require==\"function\"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error(\"Cannot find module \'\"+o+\"\'\");throw f.code=\"MODULE_NOT_FOUND\",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require==\"function\"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+module.exports = function () {
+  return \'youemdee\';
+};
+
+},{}]},{},[1])
+
+)(1)
+  })(function newRequire (name) {
+    if (name === \'dep1\') return dep0
+    if (typeof require !== \'undefined\') return require(name)
+    var err = new Error(\"Cannot find module \'\" + name + \"\'\")
+    err.code = \'MODULE_NOT_FOUND\'
+    throw err
+  })
+})
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL25vZGVfbW9kdWxlcy9icm93c2VyLXBhY2svX3ByZWx1ZGUuanMiLCIuLi9saWIvQXV0b2NvbXBsZXRlLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7O1lBQUE7QUNBQSxPQUFPLE9BQVAsR0FBaUIsWUFBWTtBQUMzQixTQUFPLFVBQVA7QUFDRCxDQUZEIiwic291cmNlc0NvbnRlbnQiOlsiKGZ1bmN0aW9uIGUodCxuLHIpe2Z1bmN0aW9uIHMobyx1KXtpZighbltvXSl7aWYoIXRbb10pe3ZhciBhPXR5cGVvZiByZXF1aXJlPT1cImZ1bmN0aW9uXCImJnJlcXVpcmU7aWYoIXUmJmEpcmV0dXJuIGEobywhMCk7aWYoaSlyZXR1cm4gaShvLCEwKTt2YXIgZj1uZXcgRXJyb3IoXCJDYW5ub3QgZmluZCBtb2R1bGUgJ1wiK28rXCInXCIpO3Rocm93IGYuY29kZT1cIk1PRFVMRV9OT1RfRk9VTkRcIixmfXZhciBsPW5bb109e2V4cG9ydHM6e319O3Rbb11bMF0uY2FsbChsLmV4cG9ydHMsZnVuY3Rpb24oZSl7dmFyIG49dFtvXVsxXVtlXTtyZXR1cm4gcyhuP246ZSl9LGwsbC5leHBvcnRzLGUsdCxuLHIpfXJldHVybiBuW29dLmV4cG9ydHN9dmFyIGk9dHlwZW9mIHJlcXVpcmU9PVwiZnVuY3Rpb25cIiYmcmVxdWlyZTtmb3IodmFyIG89MDtvPHIubGVuZ3RoO28rKylzKHJbb10pO3JldHVybiBzfSkiLCJtb2R1bGUuZXhwb3J0cyA9IGZ1bmN0aW9uICgpIHtcbiAgcmV0dXJuICd5b3VlbWRlZSdcbn1cbiJdfQ=="
+`;
+
+exports[`test Help text and failure on no args 1`] = `
+"youemdee
+
+  Reads a browserify/browser-pack JavaScript bundle from stdin and wraps it in a Universal Module Definition (UMD) with optional external dependencies. An optional source map can be provided inline in the input, and will be updated and output inline with the UMD bundle on stdout.
+
+Synopsis
+
+  $ youemdee <module-name>
+
+  It is highly encouraged to stick to [a-zA-Z] for module-name, as anything else will make accessing your module in the global scope more difficult (window.MyModule vs. window[\'my-module\']).
+
+Options
+
+  -h, --help         Display this usage guide
+  -d, --dependency   A dependency in the form of name[:global[:amd]], multiple occurences allowed
+
+Examples
+
+  No external dependencies               $ youemdee MyModule < bundle.js
+  React and ReactDOM as external deps.   $ youemdee MyComponent --dependency react:React --dependency react-dom:ReactDOM < bundle.js
+"
+`;
+
+exports[`test Help text and success on --help 1`] = `
+"youemdee
+
+  Reads a browserify/browser-pack JavaScript bundle from stdin and wraps it in a Universal Module Definition (UMD) with optional external dependencies. An optional source map can be provided inline in the input, and will be updated and output inline with the UMD bundle on stdout.
+
+Synopsis
+
+  $ youemdee <module-name>
+
+  It is highly encouraged to stick to [a-zA-Z] for module-name, as anything else will make accessing your module in the global scope more difficult (window.MyModule vs. window[\'my-module\']).
+
+Options
+
+  -h, --help         Display this usage guide
+  -d, --dependency   A dependency in the form of name[:global[:amd]], multiple occurences allowed
+
+Examples
+
+  No external dependencies               $ youemdee MyModule < bundle.js
+  React and ReactDOM as external deps.   $ youemdee MyComponent --dependency react:React --dependency react-dom:ReactDOM < bundle.js
+"
+`;
+
+exports[`test Help text and success on -h 1`] = `
+"youemdee
+
+  Reads a browserify/browser-pack JavaScript bundle from stdin and wraps it in a Universal Module Definition (UMD) with optional external dependencies. An optional source map can be provided inline in the input, and will be updated and output inline with the UMD bundle on stdout.
+
+Synopsis
+
+  $ youemdee <module-name>
+
+  It is highly encouraged to stick to [a-zA-Z] for module-name, as anything else will make accessing your module in the global scope more difficult (window.MyModule vs. window[\'my-module\']).
+
+Options
+
+  -h, --help         Display this usage guide
+  -d, --dependency   A dependency in the form of name[:global[:amd]], multiple occurences allowed
+
+Examples
+
+  No external dependencies               $ youemdee MyModule < bundle.js
+  React and ReactDOM as external deps.   $ youemdee MyComponent --dependency react:React --dependency react-dom:ReactDOM < bundle.js
+"
+`;
+
+exports[`test UMD bundle with multiple dependencies 1`] = `
+"(function (g, factory) {
+    if (typeof exports === \'object\' && typeof module !== \'undefined\') {
+        module.exports = factory(require(\'dep1\'), require(\'dep2\'), require(\'dep3\'))
+    } else if (typeof define === \'function\' && define.amd) {
+        define([\'dep1\', \'dep2\', \'dep3\'], factory)
+    } else {
+        g[\'MyModule\'] = factory(g[\'dep1\'], g[\'dep2\'], g[\'dep3\'])
+    }
+})(this, function (dep0, dep1, dep2) {
+  return (function (require) {
+    var define, module, exports // Reset to avoid causing problems for any nested UMDs
+    return ((function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require==\"function\"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error(\"Cannot find module \'\"+o+\"\'\");throw f.code=\"MODULE_NOT_FOUND\",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require==\"function\"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+module.exports = function () {
+  return \'youemdee\';
+};
+
+},{}]},{},[1])
+
+)(1)
+  })(function newRequire (name) {
+    if (name === \'dep1\') return dep0
+if (name === \'dep2\') return dep1
+if (name === \'dep3\') return dep2
+    if (typeof require !== \'undefined\') return require(name)
+    var err = new Error(\"Cannot find module \'\" + name + \"\'\")
+    err.code = \'MODULE_NOT_FOUND\'
+    throw err
+  })
+})
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL25vZGVfbW9kdWxlcy9icm93c2VyLXBhY2svX3ByZWx1ZGUuanMiLCIuLi9saWIvQXV0b2NvbXBsZXRlLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7O1lBQUE7QUNBQSxPQUFPLE9BQVAsR0FBaUIsWUFBWTtBQUMzQixTQUFPLFVBQVA7QUFDRCxDQUZEIiwic291cmNlc0NvbnRlbnQiOlsiKGZ1bmN0aW9uIGUodCxuLHIpe2Z1bmN0aW9uIHMobyx1KXtpZighbltvXSl7aWYoIXRbb10pe3ZhciBhPXR5cGVvZiByZXF1aXJlPT1cImZ1bmN0aW9uXCImJnJlcXVpcmU7aWYoIXUmJmEpcmV0dXJuIGEobywhMCk7aWYoaSlyZXR1cm4gaShvLCEwKTt2YXIgZj1uZXcgRXJyb3IoXCJDYW5ub3QgZmluZCBtb2R1bGUgJ1wiK28rXCInXCIpO3Rocm93IGYuY29kZT1cIk1PRFVMRV9OT1RfRk9VTkRcIixmfXZhciBsPW5bb109e2V4cG9ydHM6e319O3Rbb11bMF0uY2FsbChsLmV4cG9ydHMsZnVuY3Rpb24oZSl7dmFyIG49dFtvXVsxXVtlXTtyZXR1cm4gcyhuP246ZSl9LGwsbC5leHBvcnRzLGUsdCxuLHIpfXJldHVybiBuW29dLmV4cG9ydHN9dmFyIGk9dHlwZW9mIHJlcXVpcmU9PVwiZnVuY3Rpb25cIiYmcmVxdWlyZTtmb3IodmFyIG89MDtvPHIubGVuZ3RoO28rKylzKHJbb10pO3JldHVybiBzfSkiLCJtb2R1bGUuZXhwb3J0cyA9IGZ1bmN0aW9uICgpIHtcbiAgcmV0dXJuICd5b3VlbWRlZSdcbn1cbiJdfQ=="
+`;
+
+exports[`test UMD bundle with no dependencies 1`] = `
+"(function (g, factory) {
+    if (typeof exports === \'object\' && typeof module !== \'undefined\') {
+        module.exports = factory()
+    } else if (typeof define === \'function\' && define.amd) {
+        define([], factory)
+    } else {
+        g[\'MyModule\'] = factory()
+    }
+})(this, function () {
+  return (function (require) {
+    var define, module, exports // Reset to avoid causing problems for any nested UMDs
+    return ((function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require==\"function\"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error(\"Cannot find module \'\"+o+\"\'\");throw f.code=\"MODULE_NOT_FOUND\",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require==\"function\"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+module.exports = function () {
+  return \'youemdee\';
+};
+
+},{}]},{},[1])
+
+)(1)
+  })(function newRequire (name) {
+    
+    if (typeof require !== \'undefined\') return require(name)
+    var err = new Error(\"Cannot find module \'\" + name + \"\'\")
+    err.code = \'MODULE_NOT_FOUND\'
+    throw err
+  })
+})
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL25vZGVfbW9kdWxlcy9icm93c2VyLXBhY2svX3ByZWx1ZGUuanMiLCIuLi9saWIvQXV0b2NvbXBsZXRlLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7O1lBQUE7QUNBQSxPQUFPLE9BQVAsR0FBaUIsWUFBWTtBQUMzQixTQUFPLFVBQVA7QUFDRCxDQUZEIiwic291cmNlc0NvbnRlbnQiOlsiKGZ1bmN0aW9uIGUodCxuLHIpe2Z1bmN0aW9uIHMobyx1KXtpZighbltvXSl7aWYoIXRbb10pe3ZhciBhPXR5cGVvZiByZXF1aXJlPT1cImZ1bmN0aW9uXCImJnJlcXVpcmU7aWYoIXUmJmEpcmV0dXJuIGEobywhMCk7aWYoaSlyZXR1cm4gaShvLCEwKTt2YXIgZj1uZXcgRXJyb3IoXCJDYW5ub3QgZmluZCBtb2R1bGUgJ1wiK28rXCInXCIpO3Rocm93IGYuY29kZT1cIk1PRFVMRV9OT1RfRk9VTkRcIixmfXZhciBsPW5bb109e2V4cG9ydHM6e319O3Rbb11bMF0uY2FsbChsLmV4cG9ydHMsZnVuY3Rpb24oZSl7dmFyIG49dFtvXVsxXVtlXTtyZXR1cm4gcyhuP246ZSl9LGwsbC5leHBvcnRzLGUsdCxuLHIpfXJldHVybiBuW29dLmV4cG9ydHN9dmFyIGk9dHlwZW9mIHJlcXVpcmU9PVwiZnVuY3Rpb25cIiYmcmVxdWlyZTtmb3IodmFyIG89MDtvPHIubGVuZ3RoO28rKylzKHJbb10pO3JldHVybiBzfSkiLCJtb2R1bGUuZXhwb3J0cyA9IGZ1bmN0aW9uICgpIHtcbiAgcmV0dXJuICd5b3VlbWRlZSdcbn1cbiJdfQ=="
+`;
+
+exports[`test UMD bundle with no input source map 1`] = `
+"(function (g, factory) {
+    if (typeof exports === \'object\' && typeof module !== \'undefined\') {
+        module.exports = factory()
+    } else if (typeof define === \'function\' && define.amd) {
+        define([], factory)
+    } else {
+        g[\'MyModule\'] = factory()
+    }
+})(this, function () {
+  return (function (require) {
+    var define, module, exports // Reset to avoid causing problems for any nested UMDs
+    return (foo())(1)
+  })(function newRequire (name) {
+    
+    if (typeof require !== \'undefined\') return require(name)
+    var err = new Error(\"Cannot find module \'\" + name + \"\'\")
+    err.code = \'MODULE_NOT_FOUND\'
+    throw err
+  })
+})"
+`;
+
+exports[`test UMD bundle with single dependency 1`] = `
+"(function (g, factory) {
+    if (typeof exports === \'object\' && typeof module !== \'undefined\') {
+        module.exports = factory(require(\'dep1\'))
+    } else if (typeof define === \'function\' && define.amd) {
+        define([\'dep1\'], factory)
+    } else {
+        g[\'MyModule\'] = factory(g[\'dep1\'])
+    }
+})(this, function (dep0) {
+  return (function (require) {
+    var define, module, exports // Reset to avoid causing problems for any nested UMDs
+    return ((function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require==\"function\"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error(\"Cannot find module \'\"+o+\"\'\");throw f.code=\"MODULE_NOT_FOUND\",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require==\"function\"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+module.exports = function () {
+  return \'youemdee\';
+};
+
+},{}]},{},[1])
+
+)(1)
+  })(function newRequire (name) {
+    if (name === \'dep1\') return dep0
+    if (typeof require !== \'undefined\') return require(name)
+    var err = new Error(\"Cannot find module \'\" + name + \"\'\")
+    err.code = \'MODULE_NOT_FOUND\'
+    throw err
+  })
+})
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL25vZGVfbW9kdWxlcy9icm93c2VyLXBhY2svX3ByZWx1ZGUuanMiLCIuLi9saWIvQXV0b2NvbXBsZXRlLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7O1lBQUE7QUNBQSxPQUFPLE9BQVAsR0FBaUIsWUFBWTtBQUMzQixTQUFPLFVBQVA7QUFDRCxDQUZEIiwic291cmNlc0NvbnRlbnQiOlsiKGZ1bmN0aW9uIGUodCxuLHIpe2Z1bmN0aW9uIHMobyx1KXtpZighbltvXSl7aWYoIXRbb10pe3ZhciBhPXR5cGVvZiByZXF1aXJlPT1cImZ1bmN0aW9uXCImJnJlcXVpcmU7aWYoIXUmJmEpcmV0dXJuIGEobywhMCk7aWYoaSlyZXR1cm4gaShvLCEwKTt2YXIgZj1uZXcgRXJyb3IoXCJDYW5ub3QgZmluZCBtb2R1bGUgJ1wiK28rXCInXCIpO3Rocm93IGYuY29kZT1cIk1PRFVMRV9OT1RfRk9VTkRcIixmfXZhciBsPW5bb109e2V4cG9ydHM6e319O3Rbb11bMF0uY2FsbChsLmV4cG9ydHMsZnVuY3Rpb24oZSl7dmFyIG49dFtvXVsxXVtlXTtyZXR1cm4gcyhuP246ZSl9LGwsbC5leHBvcnRzLGUsdCxuLHIpfXJldHVybiBuW29dLmV4cG9ydHN9dmFyIGk9dHlwZW9mIHJlcXVpcmU9PVwiZnVuY3Rpb25cIiYmcmVxdWlyZTtmb3IodmFyIG89MDtvPHIubGVuZ3RoO28rKylzKHJbb10pO3JldHVybiBzfSkiLCJtb2R1bGUuZXhwb3J0cyA9IGZ1bmN0aW9uICgpIHtcbiAgcmV0dXJuICd5b3VlbWRlZSdcbn1cbiJdfQ=="
+`;

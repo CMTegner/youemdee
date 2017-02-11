@@ -1,0 +1,19 @@
+youemdee
+
+  Reads a browserify/browser-pack JavaScript bundle from stdin and wraps it in a Universal Module Definition (UMD) with optional external dependencies. An optional source map can be provided inline in the input, and will be updated and output inline with the UMD bundle on stdout.
+
+Synopsis
+
+  $ youemdee <module-name>
+
+  It is highly encouraged to stick to [a-zA-Z] for module-name, as anything else will make accessing your module in the global scope more difficult (window.MyModule vs. window['my-module']).
+
+Options
+
+  -h, --help         Display this usage guide
+  -d, --dependency   A dependency in the form of name[:global[:amd]], multiple occurences allowed
+
+Examples
+
+  No external dependencies               $ youemdee MyModule < bundle.js
+  React and ReactDOM as external deps.   $ youemdee MyComponent --dependency react:React --dependency react-dom:ReactDOM < bundle.js
