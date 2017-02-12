@@ -1,4 +1,4 @@
-# youemdee
+# youemdee [![Build Status](https://travis-ci.org/CMTegner/youemdee.svg?branch=master)](https://travis-ci.org/CMTegner/youemdee)
 
 Wrap a browserify/browser-pack JavaScript bundle in a Universal Module Definition (UMD) with optional external dependencies, while preserving source maps.
 
