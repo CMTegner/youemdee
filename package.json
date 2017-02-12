@@ -1,6 +1,6 @@
 {
   "name": "youemdee",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Wrap a browserify/browser-pack JavaScript bundle in a Universal Module Definition (UMD) with optional external dependencies, while preserving source maps",
   "main": "./src/youemdee.js",
   "bin": {
