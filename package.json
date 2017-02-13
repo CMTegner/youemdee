@@ -13,6 +13,9 @@
     "type": "git",
     "url": "https://github.com/CMTegner/youemdee"
   },
+  "bugs": {
+    "url": "https://github.com/CMTegner/youemdee/issues"
+  },
   "keywords": [
     "umd",
     "browserify",
